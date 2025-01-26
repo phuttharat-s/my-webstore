@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านขายโค้ด - My Webstore</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- ใช้ Tailwind CSS -->
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-gray-900 text-white p-5 text-center">
+        <h1 class="text-2xl font-bold">ร้านขายโค้ดของฉัน</h1>
+        <nav>
+            <ul class="flex justify-center gap-5 mt-2">
+                <li><a href="#" class="hover:text-gray-400">หน้าแรก</a></li>
+                <li><a href="#" class="hover:text-gray-400">สินค้า</a></li>
+                <li><a href="#" class="hover:text-gray-400">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center bg-blue-500 text-white py-20">
+        <h2 class="text-3xl font-bold">ยินดีต้อนรับสู่ร้านขายโค้ดของเรา</h2>
+        <p class="mt-2">เลือกซื้อเทมเพลต HTML, CSS และ JavaScript คุณภาพสูง!</p>
+        <a href="checkout.html" class="bg-yellow-400 text-black px-6 py-3 mt-4 inline-block rounded-lg">
+            ซื้อเวอร์ชันเต็ม
+        </a>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-10">
+        <h2 class="text-center text-2xl font-bold">สินค้าแนะนำ</h2>
+        <div class="flex justify-center mt-5">
+            <div class="bg-white p-5 rounded-lg shadow-lg w-1/3">
+                <img src="images/template1.jpg" alt="เทมเพลต HTML" class="rounded-lg w-full h-48 object-cover">
+                <p class="mt-2 text-center">เทมเพลต HTML พร้อมใช้งาน</p>
+                <div class="flex justify-between mt-4">
+                    <a href="https://yourdomain.com/free-template.zip"
+                        class="bg-green-500 text-white px-4 py-2 rounded-lg">
+                        ดาวน์โหลดฟรี
+                    </a>
+                    <a href="checkout.html"
+                        class="bg-orange-500 text-white px-4 py-2 rounded-lg">
+                        ซื้อเวอร์ชันเต็ม
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center p-4 mt-10">
+        <p>© 2025 ร้านขายโค้ดของฉัน</p>
+    </footer>
+
+</body>
+</html>

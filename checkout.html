@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงินด้วย TrueMoney Wallet หรือ PromptPay</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>ชำระเงินเพื่อดาวน์โหลดไฟล์</h2>
+
+    <p>สแกน QR Code เพื่อชำระเงิน</p>
+    
+    <!-- QR Code สำหรับ TrueMoney Wallet -->
+    <img src="qr_codes/truemoney_qr.png" alt="TrueMoney QR Code" width="250">
+
+    <!-- QR Code สำหรับ PromptPay -->
+    <img src="qr_codes/promptpay_qr.png" alt="PromptPay QR Code" width="250">
+
+    <p>เมื่อชำระเงินเสร็จแล้ว กรุณากดปุ่มด้านล่างเพื่อตรวจสอบการชำระเงิน</p>
+    
+    <!-- ปุ่มตรวจสอบการชำระเงิน -->
+    <button onclick="verifyPayment()">ตรวจสอบการชำระเงิน</button>
+
+    <script>
+        function verifyPayment() {
+            fetch("verify_payment.php")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        window.location.href = "download.php?token=" + data.token;
+                    } else {
+                        alert("ยังไม่พบการชำระเงิน กรุณาลองใหม่อีกครั้ง");
+                    }
+                });
+        }
+    </script>
+
+</body>
+</html>
